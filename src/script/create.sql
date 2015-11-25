@@ -42,7 +42,7 @@ CREATE TABLE Employe(
   CONSTRAINT Service_Verif CHECK(Service IN ('administratif', 'surveillance', 'medical')),
   CONSTRAINT Fonction_Verif CHECK( (Service IN ('medical') AND  Fonction IN ('veterinaire', 'infirmiere')) 
         OR (Service IN ('surveillance') AND  Fonction IN ('surveillant', 'chef de zone'))
-        OR (Service IN ('administration') AND  Fonction IN ('secretaire', 'comptable', 'chef du personnel', 'directeur'))),
+        OR (Service IN ('administratif') AND  Fonction IN ('secretaire', 'comptable', 'chef du personnel', 'directeur'))),
   CONSTRAINT Taux_Verif CHECK( (Service IN ('surveillance') AND Taux IS NOT NULL) OR (Service NOT IN ('surveillance') AND Taux IS NULL) ),
   CONSTRAINT Grade_Verif CHECK( (Service IN ('surveillance') AND GRADE IS NOT NULL AND Grade IN ('G1', 'G2', 'G3', 'G4', 'G5')) OR (Service NOT IN ('surveillance') AND Grade IS NULL ))
 );
