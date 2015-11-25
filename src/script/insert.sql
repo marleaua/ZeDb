@@ -33,7 +33,7 @@ NULL,
 '1989-12-21',
 '1878 rue Toutcourt Montreal QC DUY YTY',
 1234567890,
-'secretaire',
+'chef de zone',
 'surveillance',
 100,
 'G1'
